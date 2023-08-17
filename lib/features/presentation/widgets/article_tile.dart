@@ -25,7 +25,7 @@ class ArticleWidget extends StatelessWidget {
       child: Container(
         padding: const EdgeInsetsDirectional.only(
             start: 14, end: 14, bottom: 7, top: 7),
-        // height: MediaQuery.of(context).size.width / 2.2,
+        height: MediaQuery.of(context).size.width / 2.2,
         child: Row(
           children: [
             _buildImage(context),
@@ -61,10 +61,10 @@ class ArticleWidget extends StatelessWidget {
                 child: Container(
                   width: MediaQuery.of(context).size.width / 3,
                   height: double.maxFinite,
-                  child: CupertinoActivityIndicator(),
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.08),
                   ),
+                  child: const CupertinoActivityIndicator(),
                 ),
               ),
             ),
@@ -75,10 +75,10 @@ class ArticleWidget extends StatelessWidget {
                 child: Container(
                   width: MediaQuery.of(context).size.width / 3,
                   height: double.maxFinite,
-                  child: Icon(Icons.error),
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.08),
                   ),
+                  child: const Icon(Icons.error),
                 ),
               ),
             ));
